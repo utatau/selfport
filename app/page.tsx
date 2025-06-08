@@ -18,7 +18,6 @@ export default function Home() {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Project", href: "#project" },
-    { label: "Contact", href: "#contact" },
   ];
   const projectNodeJs = () => {
     window.location.href = '/Project/NodeJs';
@@ -105,13 +104,27 @@ export default function Home() {
               </div>
               <div className="flex flex-row ml-40 gap-4 relative">
                 <a href="https://instagram.com/mhrkdaa._">
-                  <img src="/assets/icon/instagram.svg" alt="Instagram" className="bg-amber-800 w-10 rounded-2xl self-start" />
+                  <Image
+                    src="/assets/icon/instagram.svg"
+                    alt="Instagram"
+                    className="bg-red-600 w-10 rounded-2xl self-start"
+                    width={30}
+                    height={30}
+                  />
                 </a>
                 <a href="https://github.com/utatau">
-                  <img src="/assets/icon/github.svg" alt="Github" className="bg-white w-10 rounded-2xl self-start" />
+                  <Image src="/assets/icon/github.svg"
+                    width={30}
+                    height={30}
+                    alt="Github"
+                    className="bg-white w-10 rounded-2xl self-start" />
                 </a>
                 <a href="https://linkedin.com/in/putra-mahardika-bb7591298/">
-                  <img src="/assets/icon/linkedin.svg" alt="Linkedin" className="bg-blue-300 w-10 rounded-2xl self-start cursor-pointer" />
+                  <Image src="/assets/icon/linkedin.svg"
+                    width={30}
+                    height={30}
+                    alt="Linkedin"
+                    className="bg-blue-300 w-10 rounded-2xl self-start cursor-pointer" />
                 </a>
               </div>
             </div>
@@ -227,19 +240,19 @@ export default function Home() {
                 delay={5000}
                 pauseOnHover={false}
               >
-                <Card>
+                <Card className="hover:bg-blue-400 hover:border-4">
                   <h3 className="text-white text-2xl  shadow-2xl m-5">ReactJs</h3>
                   <div className="flex h-full my-15 justify-center">
                     <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="Reactjs" className="h-50 cursor-pointer" onClick={() => projectReactJs()} />
                   </div>
                 </Card>
-                <Card>
+                <Card className="hover:bg-red-400 hover:border-4">
                   <h3 className="text-white text-2xl m-5">Laravel</h3>
                   <div className="flex h-full justify-center my-15">
                     <img src="https://brandlogos.net/wp-content/uploads/2022/01/laravel-logo-brandlogo.net_.png" alt="" className="h-50 cursor-pointer" onClick={() => projectLaravel()} />
                   </div>
                 </Card>
-                <Card>
+                <Card className="hover:bg-green-600 hover:border-4">
                   <h3 className="text-white text-2xl m-5">NodeJs</h3>
                   <div className="flex h-full justify-center my-15" >
                     <img src="https://static.vecteezy.com/system/resources/previews/051/336/396/non_2x/node-js-transparent-logo-free-png.png" alt="NodeJs" className="h-50 cursor-pointer" onClick={() => projectNodeJs()} />
