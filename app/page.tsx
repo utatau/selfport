@@ -55,7 +55,7 @@ export default function Home() {
       <div className="container mx-auto min-h-screen">
         <div className="grid grid-cols-12 m-5 sm:ml-3">
           <div className="col-span-6">
-            <div className="flex flex-col h-screen lg:justify-center sm:justify-start sm:mt-10 ">
+            <div className="flex flex-col h-screen lg:justify-center justify-self-start mt-10">
               <AnimatedContent
                 distance={150}
                 direction="vertical"
@@ -68,13 +68,13 @@ export default function Home() {
                 threshold={0.2}
                 delay={0.3}
               >
-                <h1 className="text-white font-bold text-7xl shadow-2xl">Hi, i'm Putra Mahardika</h1>
+                <h1 className="text-4xl text-white font-bold sm:text-7xl shadow-2xl">Hi, i'm Putra Mahardika</h1>
               </AnimatedContent>
               <div className="flex gap-2 mt-5">
                 <h1 className="font-bold text-2xl gap-4 text-white self-center">I'm Ready for Jobs</h1>
                 <RotatingText
                   texts={['Web Development', 'DevOps', 'Software Engineer', 'Backend Engineer']}
-                  mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black text-2xl  font-bold overflow-hidden py-0.5 sm:py-1 md:py-2 rounded-lg flex inline-flex"
+                  mainClassName="py-4 px-2 sm:px-2 md:px-3 bg-cyan-300 text-black text-2xl  font-bold overflow-hidden py-0.5 sm:py-1 md:py-2 rounded-lg flex inline-flex"
                   staggerFrom={"last"}
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
@@ -122,7 +122,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-span-6 h-full">
+          <div className="col-span-6 sm:h-full gap-4">
             <div className="hidden lg:flex lg:flex-col h-screen justify-center sm:hidden md:hidden">
               <div className="self-center">
                 <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
@@ -147,16 +147,16 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-80 mr-35 flex self-center h-screen justify-center sm:hidden md:hidden">
-              <div className=" self-center">
+              <div className="flex self-center mr-5">
                 <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                   <TiltedCard
                     imageSrc="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018MAHA07/1600837185.jpg"
                     altText="Putra Mahardika"
                     captionText="Putra Mahardika"
-                    containerHeight="500px"
-                    containerWidth="500px"
-                    imageHeight="500px"
-                    imageWidth="600px"
+                    containerHeight="400px"
+                    containerWidth="400px"
+                    imageHeight="400px"
+                    imageWidth="400px"
                     rotateAmplitude={12}
                     scaleOnHover={1.2}
                     showMobileWarning={false}
@@ -186,7 +186,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid grid-cols-6 text-white">
             <div className="col-span-5 sm:col-span-3 ">
-              <div className="flex self-center m-22 sm:flex sm:justify-center sm:mt-20 sm:h-180">
+              <div className="flex self-center mr-40 m-22 sm:flex sm:justify-center sm:mt-20 sm:h-180">
                 <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0}>
                   <PixelTransition
                     firstContent={
@@ -240,7 +240,7 @@ export default function Home() {
               enableBlur={true}
               baseRotation={30}
               blurStrength={10}
-              textClassName="text-white m-10 text-2xl justify-center self-center sm:m-10 sm:text-2xl"
+              textClassName="text-white m-10 text-2xl justify-center self-center sm:mt-40 sm:text-2xl"
             >
               ini adalah beberapa project saya dengan framework berbeda!
             </ScrollReveal>
