@@ -55,7 +55,7 @@ export default function Home() {
       <div className="container mx-auto min-h-screen">
         <div className="grid grid-cols-12 sm:ml-3">
           <div className="col-span-6">
-            <div className="flex flex-col h-screen justify-center ">
+            <div className="flex flex-col h-screen lg:justify-center sm:justify-start sm:mt-10 ">
               <AnimatedContent
                 distance={150}
                 direction="vertical"
