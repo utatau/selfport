@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </div>
       <div className="container mx-auto min-h-screen">
-        <div className="grid grid-cols-12 ">
+        <div className="grid grid-cols-12 sm:ml-3">
           <div className="col-span-6">
             <div className="flex flex-col h-screen justify-center ">
               <AnimatedContent
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-6 ">
-            <div className="flex flex-col h-screen justify-center">
+            <div className="lg:flex lg:flex-col h-screen justify-center sm:hidden">
               <div className="self-center">
                 <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                   <TiltedCard
@@ -151,7 +151,6 @@ export default function Home() {
                     }
                   />
                 </FadeContent>
-
               </div>
 
             </div>
@@ -172,8 +171,8 @@ export default function Home() {
         </div>
         <div className="container mx-auto">
           <div className="grid grid-cols-6 text-white">
-            <div className="col-span-3">
-              <div className="flex justify-center mt-20 h-100">
+            <div className="col-span-3 ">
+              <div className="flex justify-center mt-20 h-180">
                 <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0}>
                   <PixelTransition
                     firstContent={
@@ -187,7 +186,7 @@ export default function Home() {
                       <img
                         src="/assets/2.jpg"
                         alt="Fullstack Developer"
-                        className="object-center w-full h-full"
+                        className="object-center w-full h-full "
                       />
                     }
                     gridSize={12}
@@ -200,7 +199,7 @@ export default function Home() {
             </div>
             <div className="col-span-3 h-screen">
               <BlurText
-                text="Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika di Universitas Bina Insani. Saya memiliki ketertarikan besar dalam dunia teknologi, khususnya dalam pemrograman, pengembangan perangkat lunak, dan eksplorasi solusi digital.
+                text="Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika di Universitas Bina Insani.
                     Saya senang belajar hal-hal baru, mengembangkan keterampilan teknis, serta mencoba tantangan baru melalui proyek pribadi maupun tugas perkuliahan.
                     Bagi saya, belajar adalah proses berkelanjutan, dan dunia teknologi selalu menawarkan ruang untuk tumbuh dan berinovasi."
                 delay={120}
@@ -227,12 +226,12 @@ export default function Home() {
               enableBlur={true}
               baseRotation={30}
               blurStrength={10}
-              textClassName="text-white"
+              textClassName="text-white sm:m-10 sm:text-2xl"
             >
               ini adalah beberapa project saya dengan framework berbeda!
             </ScrollReveal>
           </div>
-          <div className="col-span-3 my-100">
+          <div className="col-span-3 lg:my-100 sm:my-80">
             <div className="h-auto relative">
               <CardSwap
                 cardDistance={60}
