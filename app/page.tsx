@@ -36,7 +36,7 @@ export default function Home() {
         />
       </div>
       <div className="container mx-auto mt-4">
-        <div className="flex justify-around shadow-2xl p-2 rounded-full">
+        <div className="flex justify-between shadow-2xl p-2 rounded-full">
           <h1 className="text-2xl font-semibold flex shadow-2xs text-white">Mahardika</h1>
           <div className="shadow-amber-100 bg-auto">
             <GooeyNav
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </div>
       <div className="container mx-auto min-h-screen">
-        <div className="grid grid-cols-12 sm:ml-3">
+        <div className="grid grid-cols-12 m-5 sm:ml-3">
           <div className="col-span-6">
             <div className="flex flex-col h-screen lg:justify-center sm:justify-start sm:mt-10 ">
               <AnimatedContent
@@ -122,8 +122,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-span-6 ">
-            <div className="lg:flex lg:flex-col h-screen justify-center sm:hidden">
+          <div className="col-span-6 h-full">
+            <div className="hidden lg:flex lg:flex-col h-screen justify-center sm:hidden md:hidden">
               <div className="self-center">
                 <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                   <TiltedCard
@@ -145,10 +145,31 @@ export default function Home() {
                   />
                 </FadeContent>
               </div>
-
+            </div>
+            <div className="mt-80 mr-35 flex self-center h-screen justify-center sm:hidden md:hidden">
+              <div className=" self-center">
+                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                  <TiltedCard
+                    imageSrc="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018MAHA07/1600837185.jpg"
+                    altText="Putra Mahardika"
+                    captionText="Putra Mahardika"
+                    containerHeight="500px"
+                    containerWidth="500px"
+                    imageHeight="500px"
+                    imageWidth="600px"
+                    rotateAmplitude={12}
+                    scaleOnHover={1.2}
+                    showMobileWarning={false}
+                    showTooltip={true}
+                    displayOverlayContent={true}
+                    overlayContent={
+                      <p></p>
+                    }
+                  />
+                </FadeContent>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
       <div className="container mx-auto" >
@@ -164,8 +185,8 @@ export default function Home() {
         </div>
         <div className="container mx-auto">
           <div className="grid grid-cols-6 text-white">
-            <div className="col-span-3 ">
-              <div className="flex justify-center mt-20 h-180">
+            <div className="col-span-5 sm:col-span-3 ">
+              <div className="flex self-center m-22 sm:flex sm:justify-center sm:mt-20 sm:h-180">
                 <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0}>
                   <PixelTransition
                     firstContent={
@@ -190,15 +211,15 @@ export default function Home() {
                 </FadeContent>
               </div>
             </div>
-            <div className="col-span-3 h-screen">
+            <div className="col-span-6 sm:col-span-3 h-screen">
               <BlurText
                 text="Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika di Universitas Bina Insani.
                     Saya senang belajar hal-hal baru, mengembangkan keterampilan teknis, serta mencoba tantangan baru melalui proyek pribadi maupun tugas perkuliahan.
                     Bagi saya, belajar adalah proses berkelanjutan, dan dunia teknologi selalu menawarkan ruang untuk tumbuh dan berinovasi."
                 delay={120}
                 animateBy="words"
-                direction="top"
-                className="text-2xl mb-8 font-semibold mt-20 justify-center"
+                direction="bottom"
+                className="text-2xl mb-8 font-semibold sm:mt-20 justify-center text-start"
               />
             </div>
           </div>
@@ -213,19 +234,19 @@ export default function Home() {
           className="text-5xl font-bold mb-9 text-white flex justify-center"
         />
         <div className="grid grid-cols-6">
-          <div className="col-span-3 h-screen">
+          <div className="col-span-5 sm:col-span-3 h-screen text-center ml-20">
             <ScrollReveal
               baseOpacity={0}
               enableBlur={true}
               baseRotation={30}
               blurStrength={10}
-              textClassName="text-white sm:m-10 sm:text-2xl"
+              textClassName="text-white m-10 text-2xl justify-center self-center sm:m-10 sm:text-2xl"
             >
               ini adalah beberapa project saya dengan framework berbeda!
             </ScrollReveal>
           </div>
-          <div className="col-span-3 lg:my-100 sm:my-80">
-            <div className="h-auto relative">
+          <div className="sm:col-span-3 sm:my-100 mr-40">
+            <div className="h-[500px] sm:h-full relative">
               <CardSwap
                 cardDistance={60}
                 verticalDistance={70}
@@ -234,7 +255,7 @@ export default function Home() {
                 onCardClick={() => { }}
               >
                 <Card className="hover:bg-blue-800 hover:border-4">
-                  <h3 className="text-white text-2xl  shadow-2xl m-5">ReactJs</h3>
+                  <h3 className="text-white text-2xl shadow-2xl m-5">ReactJs</h3>
                   <div className="flex h-full my-15 justify-center">
                     <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="Reactjs" className="h-50 cursor-pointer" onClick={() => router.push('/Project/Laravel')} />
                   </div>
