@@ -22,7 +22,7 @@ export default function Home() {
   ];
   const router = useRouter();
   return (
-    <div className="overflow-x-hidden min-h-screen bg-black overflow-y-hidden">
+    <div className="overflow-x-hidden lg:min-h-screen sm:min-h-36 bg-black overflow-y-hidden">
       <div className="right-0 left-0 bottom-0 top-0 absolute" id="home">
         <Particles
           particleColors={['#FF6EC7', '#4B0082']}
