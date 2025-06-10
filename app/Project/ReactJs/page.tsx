@@ -2,10 +2,9 @@
 import ChromaGrid from "@/app/components/ChromaGrid/ChromaGrid";
 import Particles from "@/app/components/Particles/Particles";
 import StarBorder from "@/app/components/StarBorder/StarBorder";
+import { useRouter } from "next/navigation";
 export default function ReactJs() {
-    const kembali = () => {
-        window.location.href = '/'
-    }
+    const router = useRouter()
     const items = [
         {
             image: "https://training-datalab.com/en/author/chatbot-ollama/avatar_hued5a0cfd5bfe4c2e1ac5ef76c665066b_131443_270x270_fill_lanczos_center_3.png",
@@ -53,7 +52,7 @@ export default function ReactJs() {
                         className="custom-class bg-[#FF6EC7] shadow-[#FF6EC7] cursor-pointer"
                         color="cyan"
                         speed="5s"
-                        onClick={kembali}
+                        onClick={() => router.back()}
                     >
                         Kembali
                     </StarBorder>

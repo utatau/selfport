@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef } from "react";
+import React from "react";
 import RotatingText from "./components/RotatingText/RotatingText";
 import TiltedCard from "./components/TiltedCard/TiltedCard";
 import BlurText from "./components/BlurText/BlurText";
@@ -10,24 +10,17 @@ import StarBorder from "./components/StarBorder/StarBorder";
 import FadeContent from "./components/FadeContent/FadeContent";
 import AnimatedContent from "./components/AnimatedContent/AnimatedContent";
 import PixelTransition from "./components/PixelTransition/PixelTransition";
-import CardSwap, { Card } from "./components/CardSwap/CardSwap";
+import CardSwap, { Card } from './components/CardSwap/CardSwap'
 import ScrollReveal from "./components/ScrollReveal/ScrollReveal";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 export default function Home() {
   const items = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Project", href: "#project" },
   ];
-  const projectNodeJs = () => {
-    window.location.href = '/Project/NodeJs';
-  }
-  const projectLaravel = () => {
-    window.location.href = '/Project/Laravel';
-  }
-  const projectReactJs = () => {
-    window.location.href = '/Project/ReactJs'
-  }
+  const router = useRouter();
   return (
     <div className="overflow-x-hidden min-h-screen bg-black overflow-y-hidden">
       <div className="right-0 left-0 bottom-0 top-0 absolute" id="home">
@@ -238,23 +231,24 @@ export default function Home() {
                 verticalDistance={70}
                 delay={5000}
                 pauseOnHover={false}
+                onCardClick={() => { }}
               >
-                <Card className="hover:bg-blue-400 hover:border-4">
+                <Card className="hover:bg-blue-800 hover:border-4">
                   <h3 className="text-white text-2xl  shadow-2xl m-5">ReactJs</h3>
                   <div className="flex h-full my-15 justify-center">
-                    <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="Reactjs" className="h-50 cursor-pointer" onClick={() => projectReactJs()} />
+                    <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="Reactjs" className="h-50 cursor-pointer" onClick={() => router.push('/Project/Laravel')} />
                   </div>
                 </Card>
-                <Card className="hover:bg-red-400 hover:border-4">
+                <Card className="hover:bg-red-800 hover:border-4 ">
                   <h3 className="text-white text-2xl m-5">Laravel</h3>
                   <div className="flex h-full justify-center my-15">
-                    <img src="https://brandlogos.net/wp-content/uploads/2022/01/laravel-logo-brandlogo.net_.png" alt="" className="h-50 cursor-pointer" onClick={() => projectLaravel()} />
+                    <img src="https://brandlogos.net/wp-content/uploads/2022/01/laravel-logo-brandlogo.net_.png" alt="" className="h-50 cursor-pointer" onClick={() => router.push('/Project/Laravel')} />
                   </div>
                 </Card>
-                <Card className="hover:bg-green-600 hover:border-4">
+                <Card className="hover:bg-green-800 hover:border-4">
                   <h3 className="text-white text-2xl m-5">NodeJs</h3>
                   <div className="flex h-full justify-center my-15" >
-                    <img src="https://static.vecteezy.com/system/resources/previews/051/336/396/non_2x/node-js-transparent-logo-free-png.png" alt="NodeJs" className="h-50 cursor-pointer" onClick={() => projectNodeJs()} />
+                    <img src="https://static.vecteezy.com/system/resources/previews/051/336/396/non_2x/node-js-transparent-logo-free-png.png" alt="NodeJs" className="h-50 cursor-pointer" onClick={() => router.push('/Project/NodeJs')} />
                   </div>
                 </Card>
               </CardSwap>

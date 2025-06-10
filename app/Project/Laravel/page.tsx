@@ -2,10 +2,9 @@
 import ChromaGrid from "@/app/components/ChromaGrid/ChromaGrid";
 import Particles from "@/app/components/Particles/Particles";
 import StarBorder from "@/app/components/StarBorder/StarBorder";
+import { useRouter } from "next/navigation";
 export default function Laravel() {
-    const kembali = () => {
-        window.location.href = '/'
-    }
+    const router = useRouter();
     const items = [
         {
             image: "https://www.pngkey.com/png/detail/667-6673683_e-commerce-icon-png.png",
@@ -35,7 +34,7 @@ export default function Laravel() {
                         className="custom-class bg-[#FF6EC7] shadow-[#FF6EC7] cursor-pointer"
                         color="cyan"
                         speed="5s"
-                        onClick={kembali}
+                        onClick={() => router.back()}
                     >
                         Kembali
                     </StarBorder>
