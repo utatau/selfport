@@ -22,7 +22,7 @@ export default function Home() {
   ];
   const router = useRouter();
   return (
-    <div className="overflow-x-hidden lg:min-h-screen sm:min-h-36 bg-black overflow-y-hidden">
+    <div className="overflow-x-hidden min-h-screen sm:min-h-36 bg-black overflow-y-hidden">
       <div className="right-0 left-0 bottom-0 top-0 absolute" id="home">
         <Particles
           particleColors={['#FF6EC7', '#4B0082']}
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto min-h-screen">
+      <div className="container mx-auto min-h-screen ">
         <div className="grid grid-cols-12 m-5 sm:ml-3">
           <div className="col-span-6">
             <div className="flex flex-col h-screen lg:justify-center justify-self-start mt-10">
@@ -74,7 +74,7 @@ export default function Home() {
                 <h1 className="font-bold text-2xl gap-4 text-white self-center">I'm Ready for Jobs</h1>
                 <RotatingText
                   texts={['Web Development', 'DevOps', 'Software Engineer', 'Backend Engineer']}
-                  mainClassName="py-4 px-2 sm:px-2 md:px-3 bg-cyan-300 text-black text-2xl  font-bold overflow-hidden py-0.5 sm:py-1 md:py-2 rounded-lg flex inline-flex"
+                  mainClassName="sm:px-2 md:px-3 bg-cyan-300 text-black text-2xl font-bold overflow-hidden sm:py-1 md:py-2 rounded-lg flex inline-flex"
                   staggerFrom={"last"}
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
